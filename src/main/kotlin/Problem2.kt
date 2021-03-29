@@ -25,7 +25,7 @@ private fun printFibonacci() {
     var counter = 0
     var sum = 0
 
-    while (counter < 4000000) {
+    while (true) {
         counter = num1 + num2
         num1 = num2
         num2 = counter
