@@ -11,14 +11,12 @@ Date: 29/03/2021
 */
 
 fun main(args: Array<String>) {
+    var counter = 0
     (1..999).forEach { num ->
-        printMultiples3Or5(num)
+        if (isMultiples3Or5(num))
+            counter += num
     }
+    println("Sum number multiple 3 or 5 $counter")
 }
 
-private fun printMultiples3Or5(num: Int) {
-    when {
-        num % 3 == 0 -> println(num)
-        num % 5 == 0 -> println(num)
-    }
-}
+private fun isMultiples3Or5(num: Int) = num % 3 == 0 || num % 5 == 0
