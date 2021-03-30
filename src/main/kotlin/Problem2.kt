@@ -16,7 +16,8 @@ Date: 29/03/2021
 */
 
 fun main(args: Array<String>) {
-    printFibonacci()
+    //printFibonacci()
+//    println(fibonacci(10))
 }
 
 private fun printFibonacci() {
@@ -36,4 +37,10 @@ private fun printFibonacci() {
         }
     }
     println("the even-valued terms $sum")
+}
+
+private fun fibonacci(num:Int):Int {
+    if(num == 1) return 1
+    if (num == 2) return 2
+    return fibonacci(num-1) + fibonacci(num-2)
 }
